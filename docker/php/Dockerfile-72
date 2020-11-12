@@ -16,8 +16,8 @@ Run apk add gmp-dev && \
 # Run apk add --update nodejs nodejs-npm
 
 # Install composer
-RUN php composer-setup.php && \
-    php composer-setup.php --install-dir=/usr/bin --filename=composer && \
-    php -r "unlink('composer-setup.php');"
+RUN php docker/php/composer-setup.php && \
+    php docker/php/composer-setup.php --install-dir=/usr/bin --filename=composer && \
+    php -r "unlink('docker/php/composer-setup.php');"
 
 WORKDIR /app
