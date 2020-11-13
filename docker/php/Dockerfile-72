@@ -14,7 +14,7 @@ Run apk add gmp-dev && \
 
 # Install nodejs
 # Run apk add --update nodejs nodejs-npm
-RUN apk add --no-cache libzip-dev && docker-php-ext-configure zip --with-libzip=/usr/include && docker-php-ext-install zip gmp
+RUN apk add --no-cache libzip-dev && docker-php-ext-configure zip --with-libzip=/usr/include && docker-php-ext-install zip
 
 # Install composer
 #RUN php docker/php/composer-setup.php && \
